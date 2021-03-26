@@ -1,12 +1,14 @@
 import { useRef, useEffect } from 'react'
 
-export default function usePrevStateWithDependency(value, array) {
+export default function usePrevStateWithDependency(value) {
 
   const ref = useRef()
 
-  useEffect(() => {
-    ref.current = value
-  }, array)
 
-  return ref.current,
+  useEffect(() => {
+    console.log('updating value')
+    ref.current = value
+  }, [value])
+
+  return ref.current
 }

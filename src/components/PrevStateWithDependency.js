@@ -7,7 +7,7 @@ export default function PrevStateWithDependency() {
 
   const [input, setInput] = useState('')
 
-  const prevURL = usePrevState(imgURL, [imgURL])
+  const prevURL = usePrevState(imgURL)
 
   const handleSubmit = e => {
     e.preventDefault()
@@ -18,7 +18,7 @@ export default function PrevStateWithDependency() {
     <div className="example">
 
       <p>This form tracks the previous state for us (technically this can be any previous value)</p>
-      <p>This one passes in a dependency array to avoid updating except when the dependents change</p>
+      <p>Unlike the one above, this form uses a dependency array in the custom hook to avoid unnecessarily updating the prevState if it's the same</p>
 
       <form onSubmit={handleSubmit}>
 
