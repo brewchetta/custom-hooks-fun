@@ -2,14 +2,16 @@ import { useState } from 'react'
 
 export default function useCounter(initial) {
   const [counter, setCounter] = useState(initial)
+  const [warning, setWarning] = useState('')
 
   const dispatch = num => {
-    if (num > counter) {
+    if (parseInt(num) > counter) {
       setCounter(num)
+      setWarning('')
     } else {
-      console.warn("You can't go down in numbers!")
+      setWarning('You cannot reduce these numbers!')
     }
   }
 
-  return [counter, dispatch]
+  return [counter, dispatch, warning]
 }

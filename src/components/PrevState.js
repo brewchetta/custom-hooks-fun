@@ -17,6 +17,9 @@ export default function PrevState() {
   return (
     <div className="example">
 
+      <p>This form tracks the previous state for us (technically this can be any previous value)</p>
+      <p>Notice that this updates for ANY state change in the component</p>
+
       <form onSubmit={handleSubmit}>
 
         <input type="text"
@@ -30,11 +33,11 @@ export default function PrevState() {
 
       </form>
 
-      <p>Current Image:
+      <p>Current Image: <br/>
         <img style={{maxWidth: "300px"}} src={imgURL} alt={imgURL} />
       </p>
 
-      <p>Previous Image:
+      <p>Previous Image: <br/>
         <img style={{maxWidth: "300px"}} src={prevURL} alt={prevURL} />
       </p>
 
