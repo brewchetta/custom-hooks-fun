@@ -7,11 +7,11 @@ export default function NetworkStatus() {
 
   const [messages, setMessages] = useState([])
 
-  const [catFactsStatus, catBusySignal] = useNetworkStatus("https://ghibliapi.herokuapp.com/films", {}, toggle)
+  const [ghibliStatus, ghibliBusySignal] = useNetworkStatus("https://ghibliapi.herokuapp.com/films", {}, toggle)
 
   useEffect(() => {
-    setMessages([...messages, catFactsStatus])
-  }, [catFactsStatus])
+    setMessages([...messages, ghibliStatus])
+  }, [ghibliStatus])
 
   return (
     <div className="example">
@@ -22,9 +22,10 @@ export default function NetworkStatus() {
 
       <p>One of the nice things here is it'll avoid fetching if it's already checking the status.</p>
 
-      <p>{catBusySignal ? "Getting Status" : "Confirmed"}</p>
+      <p>{ghibliBusySignal ? "Getting Status" : "Confirmed"}</p>
 
-      <p>Current status for "https://ghibliapi.herokuapp.com/films": {catFactsStatus}</p>
+      <p>Current status for "https://ghibliapi.herokuapp.com/films": </p>
+      <p style={{color: ghibliBusySignal ? "blue" : ghibliStatus === "Connected" ? "green" : "red"}}>{ghibliStatus}</p>
 
       <button onClick={() => setToggle(!toggle)}>{toggle ? "Beep" : "Boop"}</button>
 
