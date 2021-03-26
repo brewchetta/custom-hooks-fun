@@ -11,6 +11,8 @@ export default function CounterExample() {
   return (
     <div className="example">
 
+      <h2>useCounter</h2>
+
       <p>This counter can go up but sends a warning instead of allowing it to be reduced:</p>
 
       <input type="number"

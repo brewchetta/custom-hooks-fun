@@ -10,6 +10,8 @@ export default function Fetch() {
 
     <div className="example">
 
+      <h2>useFetchState</h2>
+
       <p>This is a cool one! It's a stateful hook like useState however it's "setter" callback accepts a URL / options and will fetch data, parse the JSON, and automatically set the state!</p>
       <p>It also includes a "busy signal" so you can introduce a loading spinner or something similar while the fetch is firing.</p>
 

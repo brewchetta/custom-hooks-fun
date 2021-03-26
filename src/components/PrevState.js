@@ -17,6 +17,8 @@ export default function PrevState() {
   return (
     <div className="example">
 
+      <h2>usePrevState</h2>
+
       <p>This form tracks the previous state for us (technically this can be any previous value)</p>
       <p>Notice that this updates for ANY state change in the component</p>
 

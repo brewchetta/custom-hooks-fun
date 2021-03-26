@@ -14,6 +14,8 @@ export default function ControlledForm() {
   return (
     <div className="example">
 
+      <h2>useControlledForm</h2>
+
       <p>This form uses a hook to build a dynamic form. All it needs is a submit callback and the fields it'll utilize</p>
 
       <p>Name: {currentName}</p>

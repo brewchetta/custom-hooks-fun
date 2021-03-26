@@ -17,6 +17,8 @@ export default function PrevStateWithDependency() {
   return (
     <div className="example">
 
+      <h2>usePrevStateWithDependency</h2>
+
       <p>This form tracks the previous state for us (technically this can be any previous value)</p>
       <p>Unlike the one above, this form uses a dependency array in the custom hook to avoid unnecessarily updating the prevState if it's the same</p>
 

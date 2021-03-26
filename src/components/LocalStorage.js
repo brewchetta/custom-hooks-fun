@@ -8,6 +8,8 @@ export default function LocalStorage() {
 
     <div className="example">
 
+      <h2>useLocalStorage</h2>
+
       <p>This piece of state is tied directly to local storage. This is handy since it'll persist even when leaving / reloading the page!</p>
 
       <p>Current Cat Name: {catName}</p>
