@@ -12,3 +12,5 @@ export default function usePrevious(value) {
   return ref.current
 
 }
+
+// Ripped from https://blog.logrocket.com/how-to-get-previous-props-state-with-react-hooks/
