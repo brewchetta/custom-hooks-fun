@@ -5,6 +5,7 @@ import ControlledForm from "./ControlledForm"
 import Fetch from "./Fetch"
 import LocalStorage from "./LocalStorage"
 import DocumentTitle from "./DocumentTitle"
+import NetworkStatus from "./NetworkStatus"
 import './App.css';
 
 function App() {
@@ -19,6 +20,7 @@ function App() {
       <Fetch />
       <LocalStorage />
       <DocumentTitle />
+      <NetworkStatus />
 
     </div>
   );
