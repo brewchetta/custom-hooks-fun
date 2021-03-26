@@ -1,11 +1,11 @@
 import { useState } from 'react'
 
-export default function useFetchState(url, options) {
+export default function useFetchState(initialState) {
 
   const [busy, setBusy] = useState(false)
-  const [state, setState] = useState(null)
+  const [state, setState] = useState(initialState)
 
-  const fetchCallback = () => {
+  const fetchCallback = (url, options) => {
     if (!busy) {
       setBusy(true)
       fetch(url, options).then(res => res.json())

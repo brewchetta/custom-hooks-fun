@@ -4,7 +4,7 @@ const URL = "https://cat-fact.herokuapp.com/facts"
 
 export default function Fetch() {
 
-  const [catFacts, fetchCatFacts, busySignal] = useFetchState(URL)
+  const [catFacts, fetchCatFacts, busySignal] = useFetchState([])
 
   return (
 
@@ -12,9 +12,9 @@ export default function Fetch() {
 
       {busySignal ? <p>Loading...</p> : null}
 
-      <button onClick={fetchCatFacts}>Fetch Cat Facts</button>
+      <button onClick={() => fetchCatFacts(URL)}>Fetch Cat Facts</button>
 
-      {!catFacts ? null : catFacts.map(c => <p key={c._id}>{c.text}</p>)}
+      {catFacts.map(c => <p key={c._id}>{c.text}</p>)}
 
     </div>
 
